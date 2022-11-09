@@ -50,21 +50,20 @@ let personnage5 = new Personnage(
 
 
 while (tueur.pointvie>0 ) {
+    let randomPerson = Math.floor(Math.random() * 4 + 1)
     
-    if(personnage.luck> Math.random()){
+    if(('personnage' + randomPerson).luck> Math.floor(Math.random() * (6 - 1 + 1) + 1)){
         
-        tueur.pointvie= tueur.pointvie-this.dégats 
-        console.log(Personnage.nom + " a évité et inflige " + this.degats+ " de degats au tueur.")
+        tueur.pointvie= tueur.pointvie-10
+        console.log(('personnage' + randomPerson).nom + " a évité et inflige 10 de degats au tueur.")
     } 
     
-    if(personnage.luck< Math.random()) {
-        tueur.pointvie= tueur.pointvie-this.dégats 
-        console.log(Personnage.nom + " inflige " + this.degats+ " de degats au tueur mais meurt.")
+    if(('personnage' + randomPerson)< Math.random()) {
+        tueur.pointvie= tueur.pointvie-15
+        console.log(('personnage' + randomPerson).nom + " inflige 15 de degats au tueur mais meurt.")
         }
     
     else { 
-        console.log(Personnage.nom + " est mort." )
+        console.log(('personnage' + randomPerson).nom + " est mort." )
         }
-
-    console.log(Personnage)
 }
