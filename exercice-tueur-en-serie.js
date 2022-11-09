@@ -57,7 +57,7 @@ while (tueur.pointvie>0 ) {
         console.log(Personnage.nom + " a évité et inflige " + this.degats+ " de degats au tueur.")
     } 
     
-    else{
+    if(personnage.luck< Math.random()) {
         tueur.pointvie= tueur.pointvie-this.dégats 
         console.log(Personnage.nom + " inflige " + this.degats+ " de degats au tueur mais meurt.")
         }
